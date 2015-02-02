@@ -35,10 +35,18 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
+activate :deploy do |deploy|
+  deploy.method = :git
+  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  deploy.branch   = 'master' # default: gh-pages
+  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
+end
+
 # Reload the browser automatically whenever files change
- configure :development do
-   activate :livereload
- end
+configure :development do
+ activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
