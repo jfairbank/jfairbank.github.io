@@ -1,0 +1,7 @@
+#!/bin/bash
+
+git checkout middleman
+git branch -D master
+git checkout -b master
+git filter-branch --subdirectory-filter build/ -f
+git checkout middleman
