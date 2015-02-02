@@ -2,6 +2,8 @@
 
 $sans-serif: 'Open Sans', Helvetica, Arial, sans-serif;
 $text-shadow-color: #D0CCB9;
+$text-color: #333;
+$light-text-color: #555;
 
 /* Custom, iPhone Retina */ 
 @mixin mobile-xs {
@@ -50,24 +52,41 @@ html, div {
 body {
   background-image: url(/images/halftone.png);
   background-repeat: repeat;
+  color: $text-color;
   font-family: $sans-serif;
   padding: 10px;
 }
 
 .content {
   margin: 0 auto;
-
-  //@include mobile-xs {
-    //padding: 0 10px;
-    //width: 100%;
-  //}
 }
 
 .welcome {
+  padding-top: 10px;
   text-align: center;
 
+  .avatar {
+    margin: 0 auto;
+
+    @include mobile-xs {
+      width: 192px;
+    }
+
+    @include mobile {
+      width: 256px;
+    }
+
+    @include desktop {
+      width: 384px;
+    }
+
+    img {
+      @include drop-shadow(0 0 8px #555);
+      width: 100%;
+    }
+  }
+
   .title {
-    color: #333;
     text-shadow: 2px 2px 1px $text-shadow-color;
     text-transform: uppercase;
 
@@ -85,7 +104,7 @@ body {
   }
 
   .roles {
-    color: #555;
+    color: $light-text-color;
     text-transform: uppercase;
 
     @include mobile-xs {
@@ -100,25 +119,27 @@ body {
       font-size: 24px;
     }
   }
-}
 
-.avatar {
-  margin: 0 auto;
+  .social-nav {
+    .list {
+      margin: 0;
+      padding: 0;
+    }
 
-  @include mobile-xs {
-    width: 192px;
-  }
+    .item {
+      display: inline-block;
+      margin: 0 5px;
 
-  @include mobile {
-    width: 256px;
-  }
+      a {
+        color: $text-color;
+        font-size: 50px;
+        opacity: 0.5;
+        transition: opacity 500ms;
 
-  @include desktop {
-    width: 384px;
-  }
-
-  img {
-    @include drop-shadow(0 0 8px #555);
-    width: 100%;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
