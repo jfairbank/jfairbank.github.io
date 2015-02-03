@@ -42,6 +42,7 @@ $light-text-color: #555;
 
 @mixin drop-shadow($args) {
   filter: drop-shadow($args);
+  -moz-filter: drop-shadow($args);
   -webkit-filter: drop-shadow($args);
 }
 
@@ -66,7 +67,7 @@ body {
   text-align: center;
 
   .avatar {
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
 
     @include mobile-xs {
       width: 192px;
