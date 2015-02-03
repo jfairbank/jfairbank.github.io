@@ -128,6 +128,7 @@ body {
 
       a {
         color: $text-color;
+        display: inline-block;
         opacity: 0.5;
         transition: opacity 500ms;
 
@@ -181,4 +182,34 @@ body {
   to {
     opacity: 1;
   }
+}
+
+@keyframes shake {
+  $amount: 2deg;
+
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate($amount); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-$amount); }
+  100% { transform: rotate(0deg); }
+}
+
+@-moz-keyframes shake {
+  $amount: 2deg;
+
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate($amount); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-$amount); }
+  100% { transform: rotate(0deg); }
+}
+
+@-webkit-keyframes shake {
+  $amount: 2deg;
+
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate($amount); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-$amount); }
+  100% { transform: rotate(0deg); }
 }
