@@ -4,11 +4,11 @@
 /* Small Devices, Tablets */
 /* Medium Devices, Desktops */
 /* Large Devices, Wide Screens */
-/* line 48, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+/* line 49, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
 html, div {
   box-sizing: border-box; }
 
-/* line 52, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+/* line 53, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
 body {
   background-image: url(/images/halftone.png);
   background-repeat: repeat;
@@ -16,48 +16,47 @@ body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   padding: 10px; }
 
-/* line 60, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+/* line 61, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
 .content {
   margin: 0 auto; }
 
-/* line 64, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+/* line 65, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
 .welcome {
+  animation-duration: 1000ms;
+  animation-name: fadein;
+  -moz-animation-duration: 1000ms;
+  -moz-animation-name: fadein;
+  -webkit-animation-duration: 1000ms;
+  -webkit-animation-name: fadein;
   padding-top: 10px;
   text-align: center; }
-  /* line 68, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+  /* line 76, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
   .welcome .avatar {
-    margin: 0 auto; }
+    margin: 0 auto 10px auto; }
     @media only screen and (min-width: 320px) {
-      /* line 68, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+      /* line 76, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
       .welcome .avatar {
         width: 192px; } }
-    @media only screen and (min-width: 480px) {
-      /* line 68, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
-      .welcome .avatar {
-        width: 256px; } }
     @media only screen and (min-width: 992px) {
-      /* line 68, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+      /* line 76, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
       .welcome .avatar {
         width: 384px; } }
-    /* line 83, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+    /* line 87, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
     .welcome .avatar img {
       filter: drop-shadow(0 0 8px #555);
+      -moz-filter: drop-shadow(0 0 8px #555);
       -webkit-filter: drop-shadow(0 0 8px #555);
       width: 100%; }
-  /* line 89, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+  /* line 93, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
   .welcome .title {
     text-shadow: 2px 2px 1px #D0CCB9;
     text-transform: uppercase; }
     @media only screen and (min-width: 320px) {
-      /* line 89, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+      /* line 93, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
       .welcome .title {
         font-size: 32px; } }
-    @media only screen and (min-width: 480px) {
-      /* line 89, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
-      .welcome .title {
-        font-size: 42px; } }
     @media only screen and (min-width: 992px) {
-      /* line 89, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+      /* line 93, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
       .welcome .title {
         font-size: 54px; } }
   /* line 106, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
@@ -68,28 +67,87 @@ body {
       /* line 106, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
       .welcome .roles {
         font-size: 14px; } }
-    @media only screen and (min-width: 480px) {
-      /* line 106, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
-      .welcome .roles {
-        font-size: 18px; } }
     @media only screen and (min-width: 992px) {
       /* line 106, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
       .welcome .roles {
         font-size: 24px; } }
-  /* line 124, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+  /* line 120, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
   .welcome .social-nav .list {
     margin: 0;
     padding: 0; }
-  /* line 129, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+  /* line 125, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
   .welcome .social-nav .item {
     display: inline-block;
     margin: 0 5px; }
-    /* line 133, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+    /* line 129, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
     .welcome .social-nav .item a {
       color: #333;
-      font-size: 50px;
+      display: inline-block;
       opacity: 0.5;
       transition: opacity 500ms; }
-      /* line 139, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+      @media only screen and (min-width: 320px) {
+        /* line 129, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+        .welcome .social-nav .item a {
+          font-size: 40px; } }
+      @media only screen and (min-width: 992px) {
+        /* line 129, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
+        .welcome .social-nav .item a {
+          font-size: 58px; } }
+      /* line 143, /Users/jeremy/code/jfairbank/jeremyfairbank.com/source/stylesheets/main.css.scss */
       .welcome .social-nav .item a:hover {
+        animation-duration: 500ms;
+        animation-name: shake;
+        -moz-animation-duration: 500ms;
+        -moz-animation-name: shake;
+        -webkit-animation-duration: 500ms;
+        -webkit-animation-name: shake;
         opacity: 1; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes shake {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(2deg); }
+  50% {
+    transform: rotate(0deg); }
+  75% {
+    transform: rotate(-2deg); }
+  100% {
+    transform: rotate(0deg); } }
+@-moz-keyframes shake {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(2deg); }
+  50% {
+    transform: rotate(0deg); }
+  75% {
+    transform: rotate(-2deg); }
+  100% {
+    transform: rotate(0deg); } }
+@-webkit-keyframes shake {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(2deg); }
+  50% {
+    transform: rotate(0deg); }
+  75% {
+    transform: rotate(-2deg); }
+  100% {
+    transform: rotate(0deg); } }
