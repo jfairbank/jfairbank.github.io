@@ -1,0 +1,14 @@
+twitter:
+  username: ElPapaPollo
+  icon: twitter
+  url_pattern: 'https://twitter.com/%s'
+
+github:
+  username: jfairbank
+  icon: github
+  url_pattern: 'https://github.com/%s'
+
+google_plus:
+  username: JeremyFairbank
+  icon: google-plus
+  url_pattern: 'https://plus.google.com/+%s'
