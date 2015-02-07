@@ -1,9 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800);
 
 $sans-serif: 'Open Sans', Helvetica, Arial, sans-serif;
-$text-shadow-color: #D0CCB9;
+$shadow-color: #D0CCB9;
 $text-color: #333;
 $light-text-color: #555;
+$nav-header-bg-color: #fff;
+
+@import 'header';
 
 /* Custom, iPhone Retina */ 
 @mixin mobile-xs {
@@ -55,11 +58,12 @@ body {
   background-repeat: repeat;
   color: $text-color;
   font-family: $sans-serif;
-  padding: 10px;
+  font-size: 16px;
 }
 
 .content {
   margin: 0 auto;
+  padding: 10px;
 }
 
 .welcome {
@@ -70,7 +74,7 @@ body {
   -webkit-animation-duration: 1000ms;
   -webkit-animation-name: fadein;
 
-  padding-top: 10px;
+  padding-top: 20px;
   text-align: center;
 
   .avatar {
@@ -91,7 +95,7 @@ body {
   }
 
   .title {
-    text-shadow: 2px 2px 1px $text-shadow-color;
+    text-shadow: 2px 2px 1px $shadow-color;
     text-transform: uppercase;
 
     @include mobile-xs {

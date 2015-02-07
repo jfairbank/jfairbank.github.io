@@ -3,4 +3,6 @@
   = partial 'includes/head'
 
   %body{class: page_classes}
+    = partial 'includes/header'
     = yield
+    = javascript_include_tag 'all'

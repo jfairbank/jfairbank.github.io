@@ -35,13 +35,13 @@
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
-activate :deploy do |deploy|
-  deploy.method = :git
-  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
-  deploy.branch   = 'master' # default: gh-pages
-  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
-  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
-end
+#activate :deploy do |deploy|
+  #deploy.method = :git
+  ## deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  #deploy.branch   = 'master' # default: gh-pages
+  ## deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+  ## deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
+#end
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -63,6 +63,10 @@ helpers do
       data.site
     end
   end
+
+  def page(id, file)
+    %{<div id="#{id}" class="page">#{partial file}</div>}
+  end
 end
 
 set :css_dir, 'stylesheets'
@@ -81,6 +85,8 @@ configure :build do
 
   # Enable cache buster
   activate :asset_hash
+
+  activate :sprockets
 
   # Use relative URLs
   # activate :relative_assets
