@@ -67,6 +67,26 @@ helpers do
   def page(id, file)
     %{<div id="#{id}" class="page">#{partial file}</div>}
   end
+
+  def fa(*types, tagname: 'span')
+    types = types.map { |t| "fa-#{t}" }.join(' ')
+    tag tagname, class: "fa #{types}"
+  end
+
+  def social_link(text, network = nil, use_fa: false)
+    if network.nil?
+      network = text
+      text = nil
+    end
+
+    network = data.social.send(network)
+
+    text = fa(network.icon) if use_fa
+    text = network['username'] if text.nil?
+    url = network['url_pattern'] % network['username']
+
+    link_to text, url
+  end
 end
 
 set :css_dir, 'stylesheets'
