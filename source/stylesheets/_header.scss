@@ -1,10 +1,11 @@
 .nav-header {
-  background: rgba($nav-header-bg-color, 0.95);
-  box-shadow: 0 4px 16px $shadow-color;
+  background: rgba($nav-header-bg-color, 0.99);
+  //box-shadow: 0 4px 16px $shadow-color;
+  box-shadow: 0 4px 4px rgba($shadow-color, 0.5);
   padding: 20px;
-  //position: fixed;
-  //width: 100%;
-  //z-index: 100;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 
   nav {
     &:after {

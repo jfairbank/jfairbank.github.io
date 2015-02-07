@@ -35,7 +35,7 @@
 
   function scrollToSection(id) {
     var section = document.querySelector(id);
-    scroll(document.documentElement.scrollTop, section.offsetTop);
+    scroll(window.scrollY, section.offsetTop);
   }
 
   function scrollToHashSection() {
