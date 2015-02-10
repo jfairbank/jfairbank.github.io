@@ -6,42 +6,8 @@ $text-color: #333;
 $light-text-color: #555;
 $nav-header-bg-color: #fff;
 
+@import 'mixins/devices';
 @import 'header';
-
-/* Custom, iPhone Retina */ 
-@mixin mobile-xs {
-  @media only screen and (min-width : 320px) {
-    @content;
-  }
-}
-
-/* Extra Small Devices, Phones */ 
-@mixin mobile {
-  @media only screen and (min-width : 480px) {
-    @content;
-  }
-}
-
-/* Small Devices, Tablets */
-@mixin tablet {
-  @media only screen and (min-width : 768px) {
-    @content;
-  }
-}
-
-/* Medium Devices, Desktops */
-@mixin desktop {
-  @media only screen and (min-width : 992px) {
-    @content;
-  }
-}
-
-/* Large Devices, Wide Screens */
-@mixin desktop-xl {
-  @media only screen and (min-width : 1200px) {
-    @content;
-  }
-}
 
 @mixin drop-shadow($args) {
   filter: drop-shadow($args);
