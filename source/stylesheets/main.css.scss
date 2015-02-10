@@ -6,17 +6,12 @@ $text-color: #333;
 $light-text-color: #555;
 $nav-header-bg-color: #fff;
 
+@import 'compass/css3';
 @import 'mixins/devices';
 @import 'header';
 
-@mixin drop-shadow($args) {
-  filter: drop-shadow($args);
-  -moz-filter: drop-shadow($args);
-  -webkit-filter: drop-shadow($args);
-}
-
 html, div, header {
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 }
 
 body {
@@ -33,12 +28,8 @@ body {
 }
 
 .welcome {
-  animation-duration: 1000ms;
-  animation-name: fadein;
-  -moz-animation-duration: 1000ms;
-  -moz-animation-name: fadein;
-  -webkit-animation-duration: 1000ms;
-  -webkit-animation-name: fadein;
+  @include animation-duration(1s);
+  @include animation-name(fadein);
 
   padding-top: 20px;
   text-align: center;
@@ -55,13 +46,14 @@ body {
     }
 
     img {
-      @include drop-shadow(0 0 8px #555);
+      @include filter(drop-shadow(0 0 8px #555));
       width: 100%;
     }
   }
 
   .title {
-    text-shadow: 2px 2px 1px $shadow-color;
+    @include text-shadow(2px 2px 1px $shadow-color);
+
     text-transform: uppercase;
 
     @include mobile-xs {
@@ -100,7 +92,7 @@ body {
         color: $text-color;
         display: inline-block;
         opacity: 0.5;
-        transition: opacity 500ms;
+        @include transition(opacity 500ms);
 
         @include mobile-xs {
           font-size: 40px;
@@ -111,12 +103,8 @@ body {
         }
 
         &:hover {
-          animation-duration: 500ms;
-          animation-name: shake;
-          -moz-animation-duration: 500ms;
-          -moz-animation-name: shake;
-          -webkit-animation-duration: 500ms;
-          -webkit-animation-name: shake;
+          @include animation-duration(500ms);
+          @include animation-name(shake);
           opacity: 1;
         }
       }
@@ -124,7 +112,7 @@ body {
   }
 }
 
-@keyframes fadein {
+@include keyframes(fadein) {
   from {
     opacity: 0;
   }
@@ -134,52 +122,12 @@ body {
   }
 }
 
-@-moz-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes shake {
+@include keyframes(shake) {
   $amount: 2deg;
 
-  0%   { transform: rotate(0deg); }
-  25%  { transform: rotate($amount); }
-  50%  { transform: rotate(0deg); }
-  75%  { transform: rotate(-$amount); }
-  100% { transform: rotate(0deg); }
-}
-
-@-moz-keyframes shake {
-  $amount: 2deg;
-
-  0%   { transform: rotate(0deg); }
-  25%  { transform: rotate($amount); }
-  50%  { transform: rotate(0deg); }
-  75%  { transform: rotate(-$amount); }
-  100% { transform: rotate(0deg); }
-}
-
-@-webkit-keyframes shake {
-  $amount: 2deg;
-
-  0%   { transform: rotate(0deg); }
-  25%  { transform: rotate($amount); }
-  50%  { transform: rotate(0deg); }
-  75%  { transform: rotate(-$amount); }
-  100% { transform: rotate(0deg); }
+  0%   { @include transform(rotate(0deg)); }
+  25%  { @include transform(rotate($amount)); }
+  50%  { @include transform(rotate(0deg)); }
+  75%  { @include transform(rotate(-$amount)); }
+  100% { @include transform(rotate(0deg)); }
 }
