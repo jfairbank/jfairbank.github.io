@@ -112,6 +112,10 @@ body {
   }
 }
 
+.page {
+  font-size: 24px;
+}
+
 @include keyframes(fadein) {
   from {
     opacity: 0;
